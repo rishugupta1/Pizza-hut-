@@ -1,32 +1,32 @@
-# project
-This C program simulates a pizza ordering system where users can choose between veg and non-veg pizzas and select from a menu of different pizza options. Let's break down the program and its functionalities in detail:
+# PIZZA HUTT PROJECT
+This C program is a simple pizza ordering system where users can choose between vegetarian (veg) and non-vegetarian (non-veg) pizzas, select their desired pizza from the menu, specify the quantity, and calculate the total bill including taxes and tips. Let's break down the key components and functionalities:
 
-Header File and Global Variables:
-The program includes the standard input/output header file stdio.h.
-Global variables are declared to store user choices and calculate prices.
-Display Menu Function (displayMenu()):
-This function displays the menu of pizza options based on whether the user chooses veg or non-veg.
-It prints the available pizza options along with their prices.
-Main Function:
-The main() function serves as the entry point of the program.
-It prompts the user to choose between veg and non-veg pizzas and stores the choice.
-Based on the user's choice, it sets flags (veg and non_veg) to indicate the type of pizza chosen.
-Menu Display and Price Calculation:
-After the user's choice is received, the menu is displayed using the displayMenu() function.
-The base price of the pizzas is calculated based on the user's choice of veg or non-veg.
-The user is prompted to select a pizza option (1-12) and enter the quantity.
-Price Calculation:
-Depending on the pizza choice and quantity, the total price is calculated.
-For non-veg pizzas, prices are directly calculated based on the choice.
-For veg pizzas, the base price is added to the price of the selected pizza option multiplied by the quantity.
-Total Bill Calculation:
-After calculating the total pizza price, the program calculates the GST (Goods and Services Tax) at 18%.
-The user is prompted to enter a tip amount.
-The total bill is calculated by adding the total pizza price, GST, and tip.
-Continuous Loop:
-The program runs in an infinite loop, allowing the user to continuously order pizzas without exiting the program.
-After displaying the total bill, the loop repeats, prompting the user for another order.
-Input Validation:
-The program performs basic input validation, ensuring that the user enters valid choices and quantities.
-It handles invalid choices by displaying an error message.
-This program provides a simple simulation of a pizza ordering system, allowing users to choose from a menu, specify quantities, calculate the total bill including taxes and tips, and place orders continuously.
+1. **Display Menu Function (`displayMenu`):**
+   - This function displays the menu based on the user's choice (veg or non-veg) and returns the base price of the pizzas. It uses a switch-case statement to print the menu options for both veg and non-veg pizzas.
+
+2. **Main Function:**
+   - The `main` function is the entry point of the program.
+   - It initializes variables such as `choice`, `pizza_choice`, `quantity`, `size_t`, and `tip`.
+   - It displays a welcome message and prompts the user to enter their choice (veg or non-veg).
+   - Based on the user's choice, it sets flags (`veg` or `non_veg`) and calls the `displayMenu` function to display the respective menu and obtain the base price.
+   - It calculates the total price based on the user's choice of pizza, quantity, and base price.
+   - It prompts the user to enter a tip amount and calculates the total bill including taxes (GST) and tip.
+   - The program runs in an infinite loop to continuously take orders until manually terminated.
+
+3. **Menu Options and Price Calculation:**
+   - The program provides a list of pizza options for both veg and non-veg categories, along with their respective prices.
+   - Based on the user's choice of pizza and quantity, it calculates the total price. For non-veg pizzas, it directly calculates the total price based on the chosen pizza option and quantity. For veg pizzas, it adds the base price to the price of the selected pizza option multiplied by the quantity.
+
+4. **Tax Calculation:**
+   - The program calculates GST (Goods and Services Tax) at a rate of 18% on the total price (excluding the tip).
+
+5. **Tip Calculation:**
+   - The program prompts the user to enter a tip amount, which is then added to the total bill.
+
+6. **Displaying Total Bill:**
+   - After calculating the total bill (including the total pizza price, GST, and tip), the program displays the total bill amount.
+
+7. **Infinite Loop:**
+   - The program runs in an infinite loop to continuously take pizza orders until manually terminated. This allows users to place multiple orders without restarting the program.
+
+Overall, this program provides a basic pizza ordering system with options for both veg and non-veg pizzas, along with functionality to calculate the total bill including taxes and tips. However, it lacks error handling and validation for user inputs, which could be added to enhance the robustness of the system.
